@@ -1,3 +1,3 @@
 # responsiveDesign
 
-rdhelms.github.io/responsiveDesign
+https://rdhelms.github.io/responsiveDesign
