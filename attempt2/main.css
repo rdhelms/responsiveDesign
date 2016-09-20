@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+}
+
+body {
+  position: relative;
+  padding: 20px;
+  color: #5ca4d6;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+#allShirts {
+}
+
+.shirtWhole {
+  float: left;
+  width: 20vw;
+  height: 23vw;
+  margin: 2vw;
+}
+
+.shirtParts {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.shirtBorder {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  border: 0.2vw solid #5ca4d6;
+  border-bottom: 0;
+}
+
+.shirtPic {
+  background-position: center;
+  background-size: 82%;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+}
+
+.shirtBlue {
+  background-image: url("shirts/blue-front.png");
+}
+
+.shirtPink {
+  background-image: url("shirts/pink-front.png");
+}
+
+.shirtYellow {
+  background-image: url("shirts/yellow-front.png");
+}
+
+.rotateIcon {
+  font-size: 1.2vw;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  width: 10%;
+  height: 7%;
+  border-right: 0.2vw solid #5ca4d6;
+  border-top: 0.2vw solid #5ca4d6;
+  line-height: 7%;
+  vertical-align: middle;
+  text-align: center;
+  transform: rotate(180deg);
+  outline: none;
+  focus: none;
+}
+
+.rotateIcon:focus+div.shirtBlue {
+  animation: flipBlue 2s 1;
+}
+
+.rotateIcon:focus+div.shirtPink {
+  animation: flipPink 2s 1;
+}
+
+.rotateIcon:focus+div.shirtYellow {
+  animation: flipYellow 2s 1;
+}
+
+@keyframes flipBlue {
+  5% {
+    transform: rotateY(90deg);
+  }
+  10% {
+    background-image: url("shirts/blue-back.png");
+    transform: rotateY(0deg);
+  }
+  90% {
+    background-image: url("shirts/blue-back.png");
+    transform: rotateY(0deg);
+  }
+  95% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    background-image: url("shirts/blue-front.png");
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes flipPink {
+  5% {
+    transform: rotateY(90deg);
+  }
+  10% {
+    background-image: url("shirts/pink-back.png");
+    transform: rotateY(0deg);
+  }
+  90% {
+    background-image: url("shirts/pink-back.png");
+    transform: rotateY(0deg);
+  }
+  95% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    background-image: url("shirts/pink-front.png");
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes flipYellow {
+  5% {
+    transform: rotateY(90deg);
+  }
+  10% {
+    background-image: url("shirts/yellow-back.png");
+    transform: rotateY(0deg);
+  }
+  90% {
+    background-image: url("shirts/yellow-back.png");
+    transform: rotateY(0deg);
+  }
+  95% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    background-image: url("shirts/yellow-front.png");
+    transform: rotateY(0deg);
+  }
+}
+
+.options {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 12%;
+  border: 0.2vw solid #5ca4d6;
+}
+
+.option {
+  font-size: 1.2vw;
+  float: left;
+  width: 20%;
+  height: 100%;
+  line-height: 2.4vw;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.option:hover, .rotateIcon:hover {
+  background-color: #5ca4d6;
+  color: white;
+  cursor: pointer;
+}
+
+
+.refresh {
+  border-right: 0.05vw solid #5ca4d6;
+}
+
+.favorite {
+  border-left: 0.05vw solid #5ca4d6;
+  border-right: 0.05vw solid #5ca4d6;
+}
+
+.size {
+  font-family: arial, sans-serif;
+  border-left: 0.05vw solid #5ca4d6;
+  border-right: 0.05vw solid #5ca4d6;
+  position: relative;
+}
+
+.size:hover .moreSizes {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 1vw);
+}
+
+.moreSizes {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: -13vw;
+  left: -15%;
+  width: 130%;
+  height: 12vw;
+  background-color: white;
+  border: 0.05vw solid #5ca4d6;
+  transition: all .5s ease-out;
+}
+
+.triangleBlue {
+  position: absolute;
+  bottom: -0.75vw;
+  left: 1.55vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.8vw 0.8vw 0 0.8vw;
+  border-color: #5ca3d6 transparent transparent transparent;
+}
+
+.triangleWhite {
+  position: absolute;
+  bottom: -0.6vw;
+  left: 1.55vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.8vw 0.8vw 0 0.8vw;
+  border-color: white transparent transparent transparent;
+}
+
+
+
+.blueShirt {
+  -webkit-filter: invert(50%) sepia(100%) hue-rotate(150deg);
+}
+
+.pinkShirt {
+    -webkit-filter: invert(50%) sepia(100%) hue-rotate(250deg);
+}
+
+.yellowShirt {
+    -webkit-filter: invert(50%) sepia(100%) hue-rotate(350deg);
+}
+
+.sizeShirt {
+  position: relative;
+  padding: 0.6vw;
+  width: 100%;
+  height: auto;
+}
+
+.sizeXLargeText {
+  font-size: 1.2vw;
+  line-height: 2.4vw;
+  position: relative;
+  top: -4.1vw;
+}
+
+.sizeLargeText {
+  font-size: 1.1vw;
+  line-height: 2.4vw;
+  position: relative;
+  top: -3.8vw;
+}
+
+.sizeMediumText {
+  font-size: 0.9vw;
+  line-height: 2.4vw;
+  position: relative;
+  top: -3.6vw;
+}
+
+.sizeSmallText {
+  font-size: 0.9vw;
+  line-height: 2.4vw;
+  position: relative;
+  top: -3.4vw;
+}
+
+.xlarge {
+  width: 100%;
+  height: 3vw;
+  position: relative;
+}
+
+.large {
+  width: 100%;
+  height: 2.5vw;
+  padding: 0.4vw;
+  position: relative;
+}
+
+.medium {
+  width: 100%;
+  height: 2vw;
+  padding: 0.6vw;
+  position: relative;
+}
+
+.small {
+  width: 100%;
+  height: 1.5vw;
+  padding: 0.8vw;
+  position: relative;
+}
+
+.color {
+  border-left: 0.05vw solid #5ca4d6;
+  border-right: 0.05vw solid #5ca4d6;
+  position: relative;
+}
+
+.color:hover .colorIcon {
+  background-color: #5ca4d6;
+  width: 1.2vw;
+  height: 1.2vw;
+  border: 0.2vw solid white;
+}
+
+.color:hover .moreColors {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 1vw);
+}
+
+.moreColors {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: -6vw;
+  left: -15%;
+  width: 135%;
+  height: 5vw;
+  padding: 0.6vw;
+  background-color: white;
+  border: 0.2vw solid #5ca4d6;
+  transition: all .5s ease;
+  font-size: 1.8vw;
+}
+
+.colorIcon {
+  width: 1.2vw;
+  height: 1.2vw;
+  background-color: #5ca4d6;
+  margin: auto;
+  margin-top: 0.6vw;
+}
+
+.blue {
+  float: left;
+  width: 50%;
+  height: 50%;
+  color: #81bce5;
+}
+
+.pink {
+  float: left;
+  width: 50%;
+  height: 50%;
+  color: #d583ac;
+}
+
+.yellow {
+  float: left;
+  width: 50%;
+  height: 50%;
+  color: #deb17e;
+}
+
+.green {
+  float: left;
+  width: 50%;
+  height: 50%;
+  color: #8bb992;
+}
+
+.cart {
+  border-left: 0.05vw solid #5ca4d6;
+}
+
+.nameAndPrice {
+  position: absolute;
+  padding: 0.2vw;
+  bottom: -2vw;
+  width: 100%;
+  height: 1.8vw;
+  line-height: 2.0vw;
+  vertical-align: middle;
+  font-size: 1.2vw;
+}
+
+.name {
+  float: left;
+  width: 60%;
+}
+
+.price {
+  font-weight: bold;
+  text-align: right;
+  float: right;
+  width: 30%;
+}
+
+@media only screen and (max-width: 1000px) {
+  #allShirts {
+    width: 72vw;
+    transform: scale(1.3);
+    transform-origin: top left;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #allShirts {
+    width: 48vw;
+    transform: scale(1.95);
+    transform-origin: top left;
+  }
+}
