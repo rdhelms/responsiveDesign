@@ -1,5 +1,5 @@
 # responsiveDesign
 
-Newest version is in the "attempt2" folder, which is what is displayed on the site page:
+Newest version is in the "attempt2" folder, which is what is displayed on the following site page:
 
-https://rdhelms.github.io/responsiveDesign
+https://rdhelms.github.io/responsiveDesign/attempt2/index.html
